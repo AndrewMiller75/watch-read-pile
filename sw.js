@@ -21,7 +21,13 @@ const PRECACHE = [
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE)
-      .then(function (c) { return c.addAll(PRECACHE); })
+      .then(function (c) {
+        // Cache each asset independently. addAll() rejects the whole install if
+        // any single request 404s, which silently kills the registration.
+        return Promise.all(PRECACHE.map(function (u) {
+          return c.add(u).catch(function () { /* keep going */ });
+        }));
+      })
       .then(function () { return self.skipWaiting(); })
   );
 });
