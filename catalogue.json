@@ -2919,10 +2919,10 @@
   "medium": "Film",
   "verdict": "",
   "title": "High and Low",
-  "meta": "Akira Kurosawa",
-  "blurb": "The note recorded only \"A film by Akira Kurosawa\" — no year, verdict or summary.",
+  "meta": "1963 · Akira Kurosawa · Japan",
+  "blurb": "A shoe-company executive (Toshiro Mifune) mortgaging everything for a boardroom takeover is told his son has been kidnapped — then that the kidnappers took his chauffeur’s son by mistake, and want the ransom anyway. The first half is a chamber drama of one man’s decision; the second is a police procedural tracking the culprit down through the city below his hilltop house.",
   "src": "Evernote note \"High and low\" · 2026-07-23",
-  "genre": "Unfiled"
+  "genre": "Thriller & Crime"
  },
  {
   "id": "film-the-train",
@@ -2932,7 +2932,7 @@
   "meta": "1964 · John Frankenheimer · US/France",
   "blurb": "Railway inspector and Resistance cell leader Paul La Biche (Burt Lancaster) is forced to prevent Col. Waldheim (Paul Scofield) from stealing a train load of modern artworks from soon-to-be-liberated Paris. Superb acting from the leads down, combined with insanely complex tracking shots, glorious practical effects, and riveting tension, should put this a close second on Frankenheimer’s resume. Instead, film consensus has bizarrely neglected this sublime blend of heist and war film (one I guarantee Christopher Nolan has watched) that wields a powerful philosophical punch.—KH",
   "src": "Robin D. Laws: Coyote vs. Acme, The Train, A Useful Ghost · 2026-09-01",
-  "genre": "Unfiled"
+  "genre": "Action & Adventure"
  },
  {
   "id": "film-coyote-vs-acme",
@@ -2942,7 +2942,7 @@
   "meta": "2026 · Dave Green · US",
   "blurb": "After a lifetime of pain and suffering from dysfunctional Acme Corp. products, Wile E. Coyote (playing himself) sees small-time legal huckster Kevin Avery’s (Will Forte) ad and decides to sue the megacorp. Although it can’t quite make up its mind (Stakhanovite paean to work itself? anti-corporate fable? the real verdict is friendship?) this lack of focus doesn’t really derail what is essentially an excuse to stitch hilarious Looney Tunes bits (both new and recycled) together. John Cena excels as the Acme corporate counsel, not just in his bullying metier but his craven-ness toward his boss Foghorn Leghorn.—KH",
   "src": "Robin D. Laws: Coyote vs. Acme, The Train, A Useful Ghost · 2026-09-01",
-  "genre": "Unfiled"
+  "genre": "Comedy"
  },
  {
   "id": "film-project-hail-mary",
@@ -2952,7 +2952,7 @@
   "meta": "2026 · Phil Lord & Christopher Miller · US",
   "blurb": "Forlorn biochemist (Ryan Gosling) on a one-way spaceship journey to Tau Ceti to understand the microorganism that is eating the sun teams with a stony, crab-like alien (James Ortiz) hoping to likewise save his own world. By turns funny, charming, and moving, all the while acting to green screen, Gosling’s tour de force performance in this SF problem-solving crowd pleaser shows what true movie stardom demands today.—RDL",
   "src": "Ken and Robin Consume Media: Camp Miasma, Project Hail Mary, and the Wonders of Albany · 2026-08-25",
-  "genre": "Unfiled"
+  "genre": "Sci-Fi & Fantasy"
  },
  {
   "id": "film-teenage-sex-and-death-at-camp-miasma",
@@ -2962,27 +2962,27 @@
   "meta": "2026 · Jane Schoenbrun · US",
   "blurb": "Tasked with a woke reboot of 1980s slasher franchise Camp Miasma, repressed filmmaker Kris (Hannah Einbeinder) seeks out the reclusive final girl of the first film in the series, Billy Presley (Gillian Anderson). Wildly layered p.o.v., recreated slasher film, and Anderson’s captivatingly insane performance make this a great ride, though compared with Schoenbrun’s superb earlier media homage I Saw the TV Glow it ends at a relatively puerile point.—KH",
   "src": "Ken and Robin Consume Media: Camp Miasma, Project Hail Mary, and the Wonders of Albany · 2026-08-25",
-  "genre": "Unfiled"
+  "genre": "Horror"
  },
  {
   "id": "book-the-ipcress-file",
   "medium": "Book",
-  "verdict": "",
+  "verdict": "Recommended",
   "title": "The Ipcress File",
   "meta": "1962 · Len Deighton",
-  "blurb": "Danger attends a sarcastic, underpaid counterintelligence officer investigating a rash of scientist disappearances when he is temporarily elevated to department head. In the first of the “Harry Palmer” series, the full template has yet to lock in, but its essential features—a cynical realist view of espionage and coolly precise prose—have already reported for duty.—RDL [Added from Evernote: the note gave no verdict.]",
+  "blurb": "Danger attends a sarcastic, underpaid counterintelligence officer investigating a rash of scientist disappearances when he is temporarily elevated to department head. In the first of the “Harry Palmer” series, the full template has yet to lock in, but its essential features—a cynical realist view of espionage and coolly precise prose—have already reported for duty.—RDL",
   "src": "Ken and Robin Consume Media: The Ipcress File, Appointment with Death, and There Are No Fakes · 2026-07-21",
   "genre": null
  },
  {
   "id": "film-there-are-no-fakes",
   "medium": "Film",
-  "verdict": "",
+  "verdict": "Recommended",
   "title": "There Are No Fakes",
   "meta": "2019 · Jamie Kastner · Canada",
-  "blurb": "Informed that a painting he purchased as the work of foundational Ojibwe painter Norval Morrisseau is a fake, Barenaked Ladies keyboardist Kevin Hearn sues the dealer who sold it to him. Investigative documentary keeps finding new layers to peel back, growing at first weirder and then darker with each new revelation.—RDL [Added from Evernote: the note gave no verdict.]",
+  "blurb": "Informed that a painting he purchased as the work of foundational Ojibwe painter Norval Morrisseau is a fake, Barenaked Ladies keyboardist Kevin Hearn sues the dealer who sold it to him. Investigative documentary keeps finding new layers to peel back, growing at first weirder and then darker with each new revelation.—RDL",
   "src": "Ken and Robin Consume Media: The Ipcress File, Appointment with Death, and There Are No Fakes · 2026-07-21",
-  "genre": "Unfiled"
+  "genre": "Documentary"
  },
  {
   "id": "book-appointment-with-death",
