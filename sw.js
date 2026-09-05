@@ -7,11 +7,12 @@
    The cache name carries a build stamp so a deploy discards the previous cache
    outright rather than relying on anyone remembering to bump a version string.
 */
-const BUILD = '20260901-220002';
+const BUILD = '20260905-221312';
 const CACHE = 'wrpile-' + BUILD;
 const PRECACHE = [
   './',
   './index.html',
+  './catalogue.json',
   './manifest.webmanifest',
   './icons/icon-192.png',
   './icons/icon-512.png',
@@ -77,7 +78,7 @@ self.addEventListener('fetch', function (e) {
   if (url.origin !== self.location.origin) return;
 
   var isDoc = e.request.mode === 'navigate' ||
-              /\/$|index\.html$|\.webmanifest$/.test(url.pathname);
+              /\/$|index\.html$|\.webmanifest$|catalogue\.json$/.test(url.pathname);
 
   e.respondWith(isDoc ? networkFirst(e.request) : cacheFirst(e.request));
 });
