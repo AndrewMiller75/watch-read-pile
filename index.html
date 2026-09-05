@@ -166,6 +166,19 @@
   .linkbtn:hover{color:var(--no)}
   .linkbtn.file:hover{color:var(--rec)}
   .linkbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .warnbar{display:none;margin:10px 0 2px;padding:10px 12px;border-radius:9px;
+    border:1px solid #e6c07a;background:#fdf6e6;color:#7a5b12;font-size:13px;line-height:1.45;
+    align-items:center;gap:10px}
+  .warnbar.on{display:flex;flex-wrap:wrap}
+  .warnbar b{color:#6a4d0c}
+  .warnbar button{font-family:var(--sans);font-size:12.5px;padding:6px 12px;border:1px solid #d7a93f;
+    background:#fff;color:#7a5b12;border-radius:7px;cursor:pointer;margin-left:auto;white-space:nowrap}
+  .warnbar button:hover{background:#fbf1dc}
+  .chiprow{display:flex;align-items:baseline;gap:8px;margin-top:10px;flex-wrap:wrap}
+  .chiplabel{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    color:#9aa3b1;flex:none;padding-top:3px}
+  .chips.gen{margin-top:0;flex:1}
+  .chip.clear{border-style:dashed;color:var(--ink-soft)}
 </style>
 </head>
 <body>
@@ -188,6 +201,11 @@
       <button id="fileBtn" class="rmbtn" type="button" title="File away everything ticked as seen">File away watched</button>
       <button id="backupBtn" class="rmbtn" type="button" title="Save or restore a copy">Backup</button>
       <button id="keyBtn" class="rmbtn" type="button" title="Set the key that saves changes">Key</button>
+    </div>
+
+    <div class="warnbar" id="warnbar">
+      <span id="warntext"></span>
+      <button type="button" id="warnKey">Set the key</button>
     </div>
 
     <div class="pnl" id="addPanel">
@@ -227,6 +245,10 @@
 
     <div class="chips" id="medChips"></div>
     <div class="chips" id="verChips"><button class="chip v-pin" data-filter-verdict="The Pinnacle">The Pinnacle</button><button class="chip v-rec" data-filter-verdict="Recommended">Recommended</button><button class="chip v-good" data-filter-verdict="Good">Good</button><button class="chip v-ok" data-filter-verdict="Okay">Okay</button></div>
+    <div class="chiprow" id="genRow" style="display:none">
+      <span class="chiplabel">Film genres</span>
+      <div class="chips gen" id="genChips"></div>
+    </div>
   </header>
 
   <main id="list"></main>
@@ -260,7 +282,8 @@
     var p=s.prefs||{};
     state={seen:s.seen||{},collapsed:s.collapsed||{},removed:s.removed||{},pending:s.pending||[],
       prefs:{blurbs:p.blurbs!==false,hideSeen:!!p.hideSeen,
-        filmView:p.filmView==='all'?'all':'genre',showFiled:!!p.showFiled}};
+        filmView:p.filmView==='all'?'all':'genre',showFiled:!!p.showFiled,
+        genres:Array.isArray(p.genres)?p.genres:[]}};
   }
   function saveState(){lsSet(LSK,JSON.stringify(state));}
 
@@ -290,6 +313,7 @@
     var hasB=!!i.blurb, filed=i.status==='filed';
     return '<article class="item'+(hasB?' has-blurb':'')+(filed?' is-filed':'')+'"'+
       ' data-id="'+esc(i.id)+'" data-medium="'+esc(i.medium)+'" data-verdict="'+esc(i.verdict||'')+'"'+
+      ' data-genre="'+esc(i.genre||'')+'"'+
       ' data-search="'+esc(searchText(i))+'">'+
       '<label class="seen"><input type="checkbox" class="seen-box" aria-label="Mark seen"><span class="tick" aria-hidden="true"></span></label>'+
       '<div class="body"><div class="row1"><h3 class="title">'+esc(i.title)+'</h3>'+
@@ -340,6 +364,7 @@
         byMed[m].slice().sort(byTitle).map(card).join('')+'</div></section>';
     }).join('');
     drawMedChips(byMed);
+    drawGenChips(byMed.Film||[]);
     applyState();
     filter();
   }
@@ -350,6 +375,24 @@
       return '<button class="chip" type="button" data-filter-medium="'+esc(m)+'" aria-pressed="'+
         (fMed===m?'true':'false')+'">'+esc(m)+' <i></i></button>';
     }).join('');
+  }
+  function drawGenChips(allFilms){
+    var row=$('genRow'), box=$('genChips');
+    var films=state.prefs.showFiled?allFilms:allFilms.filter(function(i){return i.status!=='filed';});
+    if(!films.length){ row.style.display='none'; box.innerHTML=''; return; }
+    var names={};
+    films.forEach(function(i){ names[i.genre||'Unfiled']=1; });
+    var list=Object.keys(names).sort(function(a,b){
+      if(a==='Unfiled') return -1; if(b==='Unfiled') return 1; return a<b?-1:(a>b?1:0);});
+    var picked=state.prefs.genres||[];
+    // drop any saved genre that no longer exists
+    var live=picked.filter(function(g){return names[g];});
+    if(live.length!==picked.length){ state.prefs.genres=live; saveState(); picked=live; }
+    row.style.display='';
+    box.innerHTML=list.map(function(g){
+      return '<button class="chip" type="button" data-genre="'+esc(g)+'" aria-pressed="'+
+        (picked.indexOf(g)>=0?'true':'false')+'">'+esc(g)+'</button>';
+    }).join('')+(picked.length?'<button class="chip clear" type="button" data-genre="__all">Show all</button>':'');
   }
   function applyState(){
     [].slice.call(document.querySelectorAll('.item')).forEach(function(it){
@@ -384,6 +427,8 @@
       if(fMed&&it.dataset.medium!==fMed) ok=false;
       if(fVer&&it.dataset.verdict!==fVer) ok=false;
       if(fQ&&it.dataset.search.indexOf(fQ)<0) ok=false;
+      var picked=state.prefs.genres||[];
+      if(ok&&picked.length&&it.dataset.medium==='Film'&&picked.indexOf(it.dataset.genre||'Unfiled')<0) ok=false;
       it.classList.toggle('filtered',!ok);
     });
     document.querySelectorAll('.genreblock').forEach(function(gb){
@@ -404,10 +449,24 @@
   function ghKey(){return lsGet(KEYK)||'';}
   function setSync(txt,cls){var el=$('sync');el.textContent=txt?(' · '+txt):'';el.className='sync'+(cls?' '+cls:'');}
   function pendingNote(){
-    var n=state.pending.length;
-    if(!n){setSync('');return;}
-    if(!ghKey()){setSync(n+' change'+(n>1?'s':'')+' on this device only','warn');return;}
+    var n=state.pending.length, bar=$('warnbar');
+    if(!n){ setSync(''); if(bar) bar.classList.remove('on'); return; }
+    if(!ghKey()){
+      setSync(n+' change'+(n>1?'s':'')+' on this device only','warn');
+      if(bar){
+        $('warntext').innerHTML='<b>'+n+' change'+(n>1?'s are':' is')+' saved only in this browser.</b> '+
+          'Clearing this browser\u2019s data would lose '+(n>1?'them':'it')+', and '+
+          (n>1?'they':'it')+' will not appear on your other devices until you set the key.';
+        bar.classList.add('on');
+      }
+      return;
+    }
     setSync(n+' change'+(n>1?'s':'')+' not saved yet','warn');
+    if(bar){
+      $('warntext').innerHTML='<b>'+n+' change'+(n>1?'s':'')+' waiting to save.</b> '+
+        'This happens on its own once you have a signal.';
+      bar.classList.add('on');
+    }
   }
   var pushing=false;
   function push(){
@@ -437,6 +496,7 @@
     }).then(function(out){
       cat=out; lsSet(CATK,JSON.stringify(out));
       state.pending=[]; saveState(); draw();
+      var bar=$('warnbar'); if(bar) bar.classList.remove('on');
       setSync('saved','ok');
       setTimeout(function(){if(!state.pending.length) setSync('');},4000);
     }).catch(function(e){
@@ -522,9 +582,23 @@
     });
     $('showFiled').addEventListener('change',function(e){
       state.prefs.showFiled=e.target.checked;
-      document.body.classList.toggle('show-filed',e.target.checked); saveState(); filter();
+      document.body.classList.toggle('show-filed',e.target.checked); saveState();
+      drawGenChips(items.filter(function(i){return i.medium==='Film';})); filter();
     });
     $('q').addEventListener('input',function(e){fQ=e.target.value.trim().toLowerCase();filter();});
+    $('genChips').addEventListener('click',function(e){
+      var c=e.target.closest('.chip'); if(!c) return;
+      var g=c.getAttribute('data-genre');
+      var picked=(state.prefs.genres||[]).slice();
+      if(g==='__all'){ picked=[]; }
+      else {
+        var at=picked.indexOf(g);
+        if(at>=0) picked.splice(at,1); else picked.push(g);
+      }
+      state.prefs.genres=picked; saveState();
+      drawGenChips(items.filter(function(i){return i.medium==='Film';}));
+      filter();
+    });
     chipGroup('medChips','data-filter-medium',function(v){fMed=v;});
     chipGroup('verChips','data-filter-verdict',function(v){fVer=v;});
 
@@ -545,6 +619,14 @@
     $('fileBtn').addEventListener('click',function(){
       var hit=items.filter(function(i){return state.seen[i.id]&&i.status!=='filed';});
       if(!hit.length){alert('Nothing is ticked, so there is nothing to file away.');return;}
+      if(!ghKey()){
+        alert('There is no key set on this device, so filing away '+hit.length+
+          ' items would be saved only in this browser \u2014 and lost if you ever clear it.\n\n'+
+          'Set the key first (the Key button), then try again.');
+        if(!$('keyPanel').classList.contains('open')) $('keyBtn').click();
+        $('keyBox').focus();
+        return;
+      }
       if(!confirm('File away '+hit.length+' watched item'+(hit.length>1?'s':'')+
         '? They come off the list but the record is kept — use "Show filed" to see them.')) return;
       hit.forEach(function(i){delete state.seen[i.id];state.pending.push({op:'file',id:i.id});});
@@ -602,6 +684,10 @@
       location.reload();
     });
 
+    $('warnKey').addEventListener('click',function(){
+      if(!$('keyPanel').classList.contains('open')) $('keyBtn').click();
+      $('keyBox').focus();
+    });
     window.addEventListener('online',function(){push();});
   }
 
