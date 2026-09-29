@@ -3013,5 +3013,75 @@
   "blurb": "The teaser for the A24 Elizabeth Holmes documentary, posted 7 September 2026. Listed separately from the film itself, which is out 16 October.",
   "src": "IGN on YouTube · youtube.com/watch?v=SdqFSGPvRwE",
   "genre": "Documentary"
+ },
+ {
+  "id": "film-sir-t",
+  "medium": "Film",
+  "verdict": "The Pinnacle",
+  "title": "Sirât",
+  "meta": "2025 · Oliver Laxe · Spain",
+  "blurb": "A desperate man (Sergi Lopez) seeking his missing daughter seeks her, with preteen son in tow, at a rave held near the North African desert. Beautiful and disturbing, palpably physical fable about first world assumptions of safety and the precarity they conceal.—RDL",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "genre": "Drama"
+ },
+ {
+  "id": "film-buffet-infinity",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Buffet Infinity",
+  "meta": "2025 · Simon Glassman · Canada",
+  "blurb": "Clips from local TV commercials tell of the growing rivalry between strip mall restaurants and the cosmic hunger for human minds emanating from a nearby sinkhole. Weird, hilarious horror comedy keeps wringing new escalations from its tightly restricted format.—RDL",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "genre": "Horror"
+ },
+ {
+  "id": "film-the-old-woman-with-the-knife",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "The Old Woman With the Knife",
+  "meta": "2025 · Min Kyu-dong · South Korea",
+  "blurb": "Aging legend (Lee Hye-yeong) of a vigilante assassin agency realizes a sadistic new punk recruit (Kim Sung-cheol) has her in his sights. Grippingly crafted hit man actioner offers an unexpected relationship between protagonist and antagonist.—RDL",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "genre": "Thriller & Crime"
+ },
+ {
+  "id": "film-maldoror",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Maldoror",
+  "meta": "2024 · Fabrice du Welz · Belgium",
+  "blurb": "Dogged young cop (Anthony Bajon) risks career and family in pursuit of a criminal (Sergi Lopez) at the heart of a murderous, well-connected abduction and pedophilia ring. Tense fictionalization of the horrifying Marc Dutroux case stokes fury against engrained Belgian official incompetence and corruption.—RDL",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "genre": "Thriller & Crime"
+ },
+ {
+  "id": "film-redux-redux",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Redux Redux",
+  "meta": "2025 · The McManus Brothers · US",
+  "blurb": "Against her better judgment, a hardbitten woman (Michaela McManus) who travels to alternate dimensions killing every iteration of the man who murdered her daughter acquires a runaway teen sidekick (Stella Marcus). Superbly realized indie actioner keeps finding new ways to build on its high concept premise.—RDL",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "genre": "Sci-Fi & Fantasy"
+ },
+ {
+  "id": "film-obex",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Obex",
+  "meta": "2025 · Albert Birney · US",
+  "blurb": "In the pixelly dawning of the digital age, an agoraphobic professional ASCII artist enters a strange video game to rescue his dog from its resident demon. B&W microbudget horror fantasy zigzags between disturbing and silly in its tribute to the healing power of genre nonsense.—RDL",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "genre": "Horror"
+ },
+ {
+  "id": "film-rose-of-nevada",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Rose of Nevada",
+  "meta": "2025 · Mark Jenkin · UK",
+  "blurb": "Skint family man signs on to crew a mysteriously returned fishing vessel and along with a rootless fellow recruit is cast back to 1993 in the identities of missing men. Hypnotic weird tale with a bold sound and visual scheme as chronologically displaced as its characters.—RDL",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "genre": "Horror"
  }
 ]
