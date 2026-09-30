@@ -3093,5 +3093,15 @@
   "blurb": "Action-adventure across an open-world Gotham with seven playable characters, drawing on Batman across films, comics and television, with combat taking heavy inspiration from the Arkham games. Released 22 May 2026 on PS5, Windows and Xbox Series X/S; 18 September 2026 on Switch 2.",
   "src": "Added 29 September 2026",
   "genre": null
+ },
+ {
+  "id": "film-resident-evil",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Resident Evil",
+  "meta": "2026 · Zach Cregger · US",
+  "genre": "Horror",
+  "blurb": "On the night of the Umbrella outbreak, a medical courier (Austin Abrams) drives a delivery through the snow towards Raccoon City General, hits a woman on a mountain road, and — decently, disastrously — belts her into his passenger seat to get her to help. Cregger’s reboot escalates from zombies into tentacles and worse while holding what Vern calls a perfect Evil Dead II tone: constant laughs from the hero’s ordinary incompetence, none of them at the horror’s expense. Vern rates it the best of the Resident Evil films.",
+  "src": "Outlaw Vern"
  }
 ]
