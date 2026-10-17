@@ -3030,8 +3030,8 @@
   "verdict": "Recommended",
   "title": "Buffet Infinity",
   "meta": "2025 · Simon Glassman · Canada",
-  "blurb": "Clips from local TV commercials tell of the growing rivalry between strip mall restaurants and the cosmic hunger for human minds emanating from a nearby sinkhole. Weird, hilarious horror comedy keeps wringing new escalations from its tightly restricted format.—RDL",
-  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup",
+  "blurb": "Clips from local TV commercials tell of the growing rivalry between strip mall restaurants and the cosmic hunger for human minds emanating from a nearby sinkhole. Weird, hilarious horror comedy keeps wringing new escalations from its tightly restricted format.—RDL / Second review, Ken and Robin Consume Media 13 October 2026: VHS recordings of UHF-network newscasts and ads tell the story of a cosmic horror invading a city in Alberta. Teetering mix of horror and comedy keeps the plates spinning through a slightly overlong run time (the middle act lags a bit), only once violating its own cinematic rules but with a bit so perfect I can’t really complain. Absolutely one of the most original and effective horror films in an excellent year for horror films.—KH",
+  "src": "Robin D. Laws: RVIFF 2026 Capsule Review Roundup ; Ken and Robin Consume Media · 2026-10-13",
   "genre": "Horror"
  },
  {
@@ -3114,5 +3114,35 @@
   "status": "filed",
   "blurb": "A woman arrives at a Detroit rental to find it double-booked by a stranger, and the house turns out to be the least of it. Cregger’s first feature, and the one that established the handbrake-turn structure he has used since.",
   "src": "Seen and enjoyed — Andrew’s own record, added 30 September 2026"
+ },
+ {
+  "id": "film-ithaqua",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Ithaqua",
+  "meta": "2026 · Casey Walker · Canada/UK",
+  "genre": "Horror",
+  "src": "Ken and Robin Consume Media · 2026-10-13",
+  "blurb": "Midwinter hunger haunting Canadian Fort William threatens American mercenary Cole Franklin (Luke Hemsworth) and his Ojibwa bride Ahnung (Leenah Robinson) in ways beyond the nutritional. The new Hammer Films returns to gory period horror with this fine wendigo movie that barely hints at cosmicism but manages the threat of starving in the snow very well, not least thanks to cinematographer Bryn McCashin and some good practical FX.—KH"
+ },
+ {
+  "id": "tv-lanterns-season-1",
+  "medium": "TV",
+  "verdict": "Recommended",
+  "title": "Lanterns — Season 1",
+  "meta": "2026 · Chris Mundy · US (HBO)",
+  "genre": null,
+  "src": "Ken and Robin Consume Media · 2026-10-13",
+  "blurb": "The past reveals its secrets when self-contained former Green Lantern trainee John Stewart (Aaron Pierre) returns to a small Nebraska town to investigate the murder of rumpled mentor and rival Hal Jordan (Kyle Chandler). Moody crime drama with a puzzle-piece chronology both downplays and honors its four-color origins.—RDL"
+ },
+ {
+  "id": "film-predators",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Predators",
+  "meta": "2025 · David Osit · US",
+  "genre": "Documentary",
+  "src": "Ken and Robin Consume Media · 2026-10-13",
+  "blurb": "Documentary examines the pedophile-hunting efforts of Chris Hansen’s To Catch a Predator segments on Dateline NBC, his current streaming venture, and his amateur YouTube imitators. Shows how hard the adult decoys work to seduce their targets into sex crimes, and how readily people can rationalize cruelty when the target is probably an abuser and they’re making a buck on it.—RDL"
  }
 ]
