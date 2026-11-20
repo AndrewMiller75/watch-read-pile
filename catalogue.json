@@ -3102,7 +3102,7 @@
   "meta": "2026 · Zach Cregger · US",
   "genre": "Horror",
   "blurb": "On the night of the Umbrella outbreak, a medical courier (Austin Abrams) drives a delivery through the snow towards Raccoon City General, hits a woman on a mountain road, and — decently, disastrously — belts her into his passenger seat to get her to help. Cregger’s reboot escalates from zombies into tentacles and worse while holding what Vern calls a perfect Evil Dead II tone: constant laughs from the hero’s ordinary incompetence, none of them at the horror’s expense. Vern rates it the best of the Resident Evil films.",
-  "src": "Outlaw Vern"
+  "src": "Outlaw Vern; Ken and Robin Consume Media · 2026-10-20"
  },
  {
   "id": "film-barbarian",
@@ -3154,5 +3154,55 @@
   "blurb": "Na Hong-jin's first film since The Wailing: a sprawling 156-minute monster/alien action picture set in the rural town of Hope Harbor. Police chief Ko Bum-seok (Hwang Jung-min), his cousin Sung-ki (Zo In-sung) and a rookie officer played by Hoyeon — who Vern says steals the film — face creatures performed in motion capture by Michael Fassbender, Alicia Vikander, Taylor Russell and Cameron Britton. Vern points to Tremors, Jaws and Mad Max, finds it funny and sometimes mean, likens the effects to Harryhausen, and calls it something special, though he expects the ending to divide people. NEON is distributing in the US.",
   "src": "Outlaw Vern",
   "genre": "Sci-Fi & Fantasy"
+ },
+ {
+  "id": "film-all-of-us-strangers",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "All of Us Strangers",
+  "meta": "2023 · Andrew Haigh · UK",
+  "blurb": "A lonely screenwriter (Andrew Scott) begins a relationship with a neighbour (Paul Mescal) and finds he can visit his childhood home and talk with his parents (Claire Foy, Jamie Bell), who died when he was twelve.",
+  "src": "Ken and Robin Consume Media · 2026-11-17",
+  "genre": "Drama"
+ },
+ {
+  "id": "film-godzilla-minus-zero",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "Godzilla Minus Zero",
+  "meta": "2026 · Takashi Yamazaki · Japan",
+  "blurb": "Two years after Minus One, the alien dragon Ghidorah attacks Japan. Noda's disaster bureau recruits the pilot Kōichi, whose wife carries Godzilla cells, just as Godzilla returns.",
+  "src": "Ken and Robin Consume Media · 2026-11-17; Outlaw Vern",
+  "genre": "Sci-Fi & Fantasy"
+ },
+ {
+  "id": "tv-vision-quest-season-1",
+  "medium": "TV",
+  "verdict": "Recommended",
+  "title": "Vision Quest — Season 1",
+  "meta": "2026 · Terry Matalas · US (Disney+)",
+  "blurb": "A rebuilt Vision (Paul Bettany), hunted by a bounty hunter (Todd Stashwick) and his shadowy clients, turns to a copy of Ultron's (James Spader) mind for help.",
+  "src": "Ken and Robin Consume Media · 2026-11-17",
+  "genre": null
+ },
+ {
+  "id": "film-the-cycle",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "The Cycle",
+  "meta": "2026 · Jordan Downey · US",
+  "blurb": "A forensic anthropologist (Deborah Ann Woll) is called to consult on three strange deaths in a Pacific Northwest town. One of the dead is the father who abandoned her as a child.",
+  "src": "Outlaw Vern",
+  "genre": "Horror"
+ },
+ {
+  "id": "film-the-weight",
+  "medium": "Film",
+  "verdict": "Recommended",
+  "title": "The Weight",
+  "meta": "2026 · Padraic McKinley · US",
+  "blurb": "During the Depression, a convict father (Ethan Hawke) can win his release by leading a six-day trek through the woods for the camp warden (Russell Crowe), carrying gold smuggled out of a mine.",
+  "src": "Outlaw Vern",
+  "genre": "Thriller & Crime"
  }
 ]
